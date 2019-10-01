@@ -1,0 +1,78 @@
+---
+---
+@import "main";
+
+/* Links */
+a,
+a:focus,
+a:active,
+ {
+  color: #a73700;
+}
+a:hover {
+	color: #d96100;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+.inner, .cover-container {
+  max-width: 60em;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+  top: -rem;
+
+}
+.cover .btn-lg {
+  padding: 0 1.25rem;
+  font-weight: 700;
+
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: $gray-400;
+}
+
+
+
+// --------- Main changes
+
+h1, h2 {
+  font-family: $font-family-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+#toTop{
+	position: fixed;
+	bottom: 1.8rem;
+	right: 1.2rem;
+	cursor: pointer;
+	display: none;
+}
