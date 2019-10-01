@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
       <link rel="stylesheet" href="{{'/assets/css/styles.css' |  prepend: site.baseurl}}">
+      <link rel="stylesheet" href="{{'/assets/css/font-awesome/css/font-awesome.min.css' |  prepend: site.baseurl}}">
+
   </head>
  <body>
       <!-- navigation -->
@@ -12,9 +14,14 @@
       <main role="main">
         <div class="jumbotron">
             <div class="container">
-                  <h1 class="display-3">Hello, world!</h1>
-                  <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+                  <h1 class="display-3">Arbor Library</h1>
+                  <p>Arbor is a library for implementing performance portable network simulations of multi-compartment neuron models.</p>
+                  <p>
+                      <a class="btn btn-info btn-md" href="https://github.com/arbor-sim/arbor" role="button">
+                          <i class="fa fa-github fa-lg" aria-hidden="true"></i> Fork on GitHub</a>
+                      <a class="btn btn-info btn-md" href="https://arbor.readthedocs.io/en/latest/" role="button">
+                          <i class="fa fa-book fa-lg" aria-hidden="true"></i> Documentation</a>
+                  </p>
             </div>
         </div>
         <div class="container">
@@ -25,6 +32,7 @@
                 </div>
               <!-- content end -->
                 <div class="col-xl-3 ">
+
                     <h1 class="display-5">News</h1>
                     <ul>
                       {% for post in site.posts %}
@@ -35,6 +43,7 @@
                         </li>
                       {% endfor %}
                     </ul>
+                     {% include subnav.html %}
                  </div>
 
             </div>

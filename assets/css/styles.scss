@@ -65,14 +65,41 @@ body {
 h1, h2 {
   font-family: $font-family-serif;
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
   padding: 2rem 0;
 }
 
-#toTop{
-	position: fixed;
-	bottom: 1.8rem;
-	right: 1.2rem;
-	cursor: pointer;
-	display: none;
+.jumbotron,
+.jumbotron h1 {
+  text-align: center;
+}
+.jumbotron {
+  padding-top: 6em;
+}
+
+#toTop {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  max-width: 10em;
+}
+.navbar-nav {
+  position: relative;
+  bottom: -0.8em;
+  left: 1em;
+}
+
+.subnav {
+  margin: 4em auto 0 auto;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 6em;
+  z-index: 1020;
 }

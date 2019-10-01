@@ -2,16 +2,75 @@
 layout: main
 title: Home
 ---
-# {{ "Hello World!" | downcase }}
+# What is abor?
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet libero et pulvinar viverra. Donec eu urna eget urna porttitor commodo at vel sem. Curabitur auctor, orci sed semper eleifend, arcu metus varius nunc, eget vestibulum velit nibh quis ipsum. Curabitur suscipit, sem rhoncus imperdiet convallis, justo orci vehicula leo, ac molestie quam metus in arcu. Sed mollis blandit consectetur. Nullam eleifend malesuada mi, ut scelerisque lorem gravida eget. Integer porttitor leo vel volutpat vulputate. Duis egestas feugiat elit. Integer mi elit, blandit non ipsum quis, lacinia rutrum ex. Praesent quis massa vel odio rhoncus rhoncus et quis justo. Quisque eu magna at libero venenatis malesuada. Curabitur arcu dui, rutrum quis rutrum sit amet, malesuada eget velit.
+Arbor is a performance portable library for simulation of large networks of multi-compartment neurons on
+contemporary high-performance computing (HPC) systems. 
+It is specialized for graphics processing units (GPUs), vectorized multicore, Intel KNL and laptops with a modular
+design for extensibility to new computer architectures.
+For more information visit <https://arbor.readthedocs.io>.
 
-## Zwei
+## What's it good for?
 
-Nullam egestas ante lectus, eu luctus nisi iaculis in. Vivamus sed faucibus ligula, ac sollicitudin tellus. Integer et porttitor turpis, eu laoreet ligula. Aliquam erat volutpat. Aenean egestas, turpis in dignissim ultrices, nunc arcu sodales velit, vel euismod dui neque sit amet leo. Nam scelerisque erat eu tortor pretium laoreet. Morbi non consectetur mauris, at lacinia augue. Proin et hendrerit mi. Sed a luctus magna. Pellentesque at neque laoreet, sagittis magna malesuada, pulvinar sem. Nulla ultricies convallis sem.
+Arbor is designed to handle very large, very long and computationally intensive problems in neuroscience. 
+Further, Arbor aims to prepare neuroscience users for new HPC architectures.
+For detailed information visit <https://arbor.readthedocs.io>.
 
-Nullam non dui lectus. Duis et ante sit amet velit porta varius. In egestas pretium nulla, et sagittis justo tincidunt sit amet. Vivamus leo odio, lobortis in turpis vel, gravida venenatis nulla. Aenean vel maximus massa, pellentesque malesuada metus. Sed ut enim iaculis, ultrices justo in, porta lorem. Nam facilisis auctor felis, ut eleifend nulla sollicitudin sed.
+## Where is it used?
 
-Pellentesque imperdiet mi in felis hendrerit, vel efficitur metus gravida. Nunc at risus ex. Mauris vitae posuere justo. Curabitur tincidunt ullamcorper laoreet. Etiam ac nibh orci. Vestibulum eu justo vulputate sapien mollis aliquam ut eget lorem. Aliquam tincidunt tortor ut est cursus hendrerit. Praesent ut eros et metus condimentum tempus vitae sit amet justo. Suspendisse potenti. Etiam at porttitor lacus.
+Arbor models multi-compartment neurons characterized by axonal delays, synaptic functions and cables. 
+Besides multi-compartment cells Arbor also models leaky integrate-and-fire cells and artificial spike sources. 
+For detailed information visit <https://arbor.readthedocs.io>.
 
-Nunc pharetra dictum tellus, id porta odio. Donec eleifend lorem fermentum dui ornare posuere. Suspendisse potenti. Nullam convallis nibh lacus. In volutpat erat elit, in laoreet erat consectetur quis. Proin orci ligula, consequat commodo rhoncus vitae, tempus vel lorem. Vivamus interdum nibh ac purus commodo egestas. Duis vestibulum sed nisl efficitur posuere. 
+## Use cases?
+
+Use cases have included the neocortical simulations, macaque visual cortical areas, and olfactory bulb simulations. 
+Arbor developers are collaborating with researchers and modellers in the development of efficient support for
+structural plasticity.
+
+## Who uses it?
+
+Arbor applications have so far been focused primarily on synthetic verification, testing and performance benchmarks
+(see <https://arxiv.org/abs/1901.07454> for details).
+However, it is planned to increase the user base within the next three years by preparing user-defined cellular
+-level models for portable HPC simulations using Arbor across a variety of current and emerging supercomputing
+resources through a Call for Expression of Interest (not open yet, check out <https://www.humanbrainproject.eu/en/collaborate/open-calls/> 
+for updates).
+Expert computational neuroscientists from both outside and inside the Human Brain Project (HBP) are invited to
+develop models and adapt workflows for Arbor, specifically for networks of detailed cell models that require HPC (<https://github.com/arbor-sim/arbor>).
+
+## Where do I get it?
+
+Arbor is developed by the Swiss National Supercomputing Center and the Jülich Supercomputing Center under the
+auspices of the HBP as an active open source project, developed using an open-development model with code, 
+continuous integration, bug reports and issues hosted on GitHub: <https://github.com/arbor-sim/arbor>.
+Benchmarking and validation of Arbor and other simulators can be performed with the NSuite performance and validation
+testing suite (<https://nsuite.readthedocs.io>, <https://github.com/arbor-sim/nsuite>).
+
+## Is it suitable for me?
+
+Use Arbor if you have the need to run your detailed cellular-level model in an efficient manner; Arbor has been
+designed to become an order of magnitude more efficient both in terms of solution times and memory usage as compared
+to existing simulation engines, without sacrificing ease of use and flexibility (see <https://arxiv.org/abs/1901.07454> 
+for details). 
+Full support for the SONATA model exchange format is under active development, and Arbor will also provide APIs for
+integration with other tools and simulators, including co-simulation with NEST (<https://www.nest-simulator.org>) 
+mediated via spike exchange for large, multi-scale brain simulations, and participation in orchestrated simulation, 
+analysis and visualization applications with NEST, Elephant (<http://neuralensemble.org/elephant/>), TVB (<https://www.thevirtualbrain.org>) 
+and other tools using the HBP in-situ pipeline (<https://hbp-hpc-platform.fz-juelich.de/?hbp_software=in-situ-pipeline>).
+
+## How do I work with it?
+
+Arbor is installed by obtaining the source code from GitHub (<https://github.com/arbor-sim/arbor>) and compiling it
+on the target system (for detailed information visit <https://arbor.readthedocs.io/en/latest/install.html>).
+Arbor provides both a low level C++ API and a higher level Python API (under development):
+
+-   The C++ API provides full control over Arbor simulations, and may be required for tightly integrated simulations
+    or scenarios where efficiency at scale is paramount (visit <https://arbor.readthedocs.io/en/latest/cpp_intro.html>
+    for more details).
+
+-   The Python API is expected to be the most commonly used interface for computational neuroscientists 
+    (visit <https://arbor.readthedocs.io/en/latest/py_intro.html> for more details).
+
+
+__________________________________________________________
