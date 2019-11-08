@@ -13,5 +13,4 @@ collections:
   posts:
     sort_by: date
   news:
-    sort_by: date
     output: true
