@@ -4,7 +4,7 @@ title: About
 ---
 # About page
 
-This page tells you a little bit about me.
+This page tells you a little bit about us.
 
 
 [Lorem ipsum dolor](#) sit amet, consectetur adipiscing elit. Nullam aliquet libero et pulvinar viverra

@@ -1,14 +1,11 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand"
-       href="#"><img src="{{'/assets/images/arbor-lines-proto-colour.svg' |  prepend: site.baseurl}}" alt="Logo Arbor" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-end">
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarToggler">
+      <ul class="navbar-nav ml-auto flex-nowrap">
         {% for item in site.data.navigation %}
             <li {% if page.url == item.link %}class="nav-item active"{% else
              %}class="nav-item"{% endif %}>
@@ -17,5 +14,6 @@
         {% endfor %}
       </ul>
     </div>
+<!-- <a href="{{ '/' }}" class="stretched-link"></a> -->
   </div>
 </nav>

@@ -9,3 +9,9 @@ future: true
 jailed: false
 gfm_quirks: paragraph_end
 exclude: []
+collections:
+  posts:
+    sort_by: date
+  news:
+    sort_by: date
+    output: true
